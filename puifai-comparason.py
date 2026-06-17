@@ -5,6 +5,7 @@ import os
 def main(page: ft.Page):
     page.title = "เปรียบเทียบราคาสินค้า"
     page.theme_mode = ft.ThemeMode.LIGHT
+    page.icon = "favicon.png"
     page.scroll = ft.ScrollMode.ADAPTIVE
     page.bgcolor = "#F0F4FF"
 
@@ -203,9 +204,10 @@ def main(page: ft.Page):
 port = int(os.environ.get("PORT", 8080))
 
 ft.app(
-    assets_dir="assets",
     target=main,
-    view=ft.AppView.WEB_BROWSER,   # ← แก้จาก ft.WEB_BROWSER เป็น ft.AppView.WEB_BROWSER
+    view=ft.AppView.WEB_BROWSER,
     port=port,
     host="0.0.0.0",
+    assets_dir="assets",   
+    web_renderer="html",        
 )
