@@ -272,7 +272,7 @@ port = int(os.environ.get("PORT", 8080))
 
 ft.app(
     target=main,
-    view=ft.WEB_BROWSER,
+    view=ft.AppView.WEB_BROWSER,
     port=port,
     host="0.0.0.0",   # ต้องเปิดให้รับ traffic จากภายนอกได้
 )
