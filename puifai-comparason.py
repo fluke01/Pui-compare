@@ -52,7 +52,7 @@ def main(page: ft.Page):
                 ft.Container(
                     content=ft.Row([
                         ft.Icon(
-                            ft.Icons.STAR if is_winner else ft.Icons.LABEL_OUTLINE,
+                            ft.icons.STAR if is_winner else ft.icons.LABEL_OUTLINE,
                             color="#F9A825" if is_winner else "#90A4AE",
                             size=18,
                         ),
@@ -161,7 +161,7 @@ def main(page: ft.Page):
             keyboard_type=ft.KeyboardType.NUMBER,
             expand=True,
             border_radius=8,
-            prefix_icon=ft.Icons.ATTACH_MONEY,
+            prefix_icon=ft.icons.ATTACH_MONEY,
             focused_border_color="#3949AB",
         )
         quantity = ft.TextField(
@@ -169,7 +169,7 @@ def main(page: ft.Page):
             keyboard_type=ft.KeyboardType.NUMBER,
             expand=True,
             border_radius=8,
-            prefix_icon=ft.Icons.SCALE,
+            prefix_icon=ft.icons.SCALE,
             focused_border_color="#3949AB",
         )
         unit_price = ft.Text(value="", size=12, color="#7986CB", italic=True)
@@ -182,7 +182,7 @@ def main(page: ft.Page):
         }
 
         delete_btn = ft.IconButton(
-            icon=ft.Icons.DELETE_OUTLINE,
+            icon=ft.icons.DELETE_OUTLINE,
             icon_color="#EF5350",
             tooltip="ลบสินค้า",
             on_click=lambda e: remove_entry(entry_container, row_data),
@@ -192,7 +192,7 @@ def main(page: ft.Page):
             content=ft.Column([
                 ft.Row([
                     ft.Row([
-                        ft.Icon(ft.Icons.SHOPPING_BASKET_OUTLINED, color="#3949AB", size=18),
+                        ft.Icon(ft.icons.SHOPPING_BASKET_OUTLINED, color="#3949AB", size=18),
                         ft.Text(f"สินค้า #{idx}", weight="bold", size=14, color="#3949AB"),
                     ], spacing=6),
                     delete_btn,
@@ -233,7 +233,7 @@ def main(page: ft.Page):
             [
                 ft.ElevatedButton(
                     "เพิ่มสินค้า",
-                    icon=ft.Icons.ADD_CIRCLE_OUTLINE,
+                    icon=ft.icons.ADD_CIRCLE_OUTLINE,
                     on_click=add_entry,
                     style=ft.ButtonStyle(
                         bgcolor="#E8EAF6",
@@ -244,7 +244,7 @@ def main(page: ft.Page):
                 ),
                 ft.FilledButton(
                     "คำนวณ",
-                    icon=ft.Icons.CALCULATE_OUTLINED,
+                    icon=ft.icons.CALCULATE_OUTLINED,
                     on_click=calculate_result,
                     style=ft.ButtonStyle(
                         bgcolor="#3949AB",
