@@ -8,6 +8,8 @@ def main(page: ft.Page):
     page.icon = "favicon.png"
     page.scroll = ft.ScrollMode.ADAPTIVE
     page.bgcolor = "#F0F4FF"
+    page.web_renderer = "html"
+    page.update()
 
     entries = []
 
